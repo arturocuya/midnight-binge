@@ -1,0 +1,26 @@
+<component name="Thumbnail" extends="Group">
+    <!-- <script type="text/brightscript" uri="Thumbnail.bs" /> -->
+    <children>
+        <Poster
+            id="thumbnailPoster"
+            width="341"
+            height="192"
+            uri="pkg:/images/indiana.png"
+        />
+        <Rectangle
+            id="tagBackground"
+            width="341"
+            height="40"
+            translation="[0, 152]"
+            color="#ff0000"
+        />
+        <Label
+            id="tagLabel"
+            text="Recently added"
+            horizAlign="center"
+            translation="[0, 160]"
+            width="341"
+            font="font:SmallestSystemFont"
+        />
+    </children>
+</component>

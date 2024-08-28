@@ -40,31 +40,9 @@
             />
         </Group>
 
-        <Group
+        <Thumbnail
             id="thumbnail"
             translation="[550, 600]"
-        >
-            <Poster
-                id="thumbnailPoster"
-                width="341"
-                height="192"
-                uri="pkg:/images/indiana.png"
-            />
-            <Rectangle
-                id="tagBackground"
-                width="341"
-                height="40"
-                translation="[0, 152]"
-                color="#ff0000"
-            />
-            <Label
-                id="tagLabel"
-                text="Recently added"
-                horizAlign="center"
-                translation="[0, 160]"
-                width="341"
-                font="font:SmallestSystemFont"
-            />
-        </Group>
+        />
     </children>
 </component>

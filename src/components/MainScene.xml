@@ -7,5 +7,62 @@
             width="235"
             height="77"
         />
+
+        <Group
+            translation="[550, 0]"
+        >
+            <Label
+                id="title"
+                text="Indiana Jones and the Raiders of the Lost Ark"
+                width="400"
+                wrap="true"
+                translation="[0, 20]"
+            >
+                <Font role="font" size="60" uri="font:SystemFontFile"/>
+            </Label>
+
+            <Label
+                id="directedBy"
+                text="Directed by: Steven Spielberg"
+                translation="[0, 400]"
+                width="400"
+                wrap="true"
+            />
+
+            <Poster
+                id="framePoster"
+                width="901"
+                height="550"
+                uri="pkg:/images/indiana-frame.png"
+                translation="[469, 0]"
+            />
+        </Group>
+
+        <Group
+            id="thumbnail"
+            translation="[550, 600]"
+        >
+            <Poster
+                id="thumbnailPoster"
+                width="341"
+                height="192"
+                uri="pkg:/images/indiana.png"
+            />
+            <Rectangle
+                id="tagBackground"
+                width="341"
+                height="40"
+                translation="[0, 152]"
+                color="#ff0000"
+            />
+            <Label
+                id="tagLabel"
+                text="Recently added"
+                horizAlign="center"
+                translation="[0, 160]"
+                width="341"
+                font="font:SmallestSystemFont"
+            />
+        </Group>
     </children>
 </component>

@@ -1,5 +1,7 @@
 <component name="Thumbnail" extends="Group">
-    <!-- <script type="text/brightscript" uri="Thumbnail.bs" /> -->
+    <interface>
+        <field id="itemContent" type="node" />
+    </interface>
     <children>
         <Poster
             id="thumbnailPoster"

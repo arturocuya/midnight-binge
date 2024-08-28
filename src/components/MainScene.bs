@@ -7,6 +7,7 @@ sub init()
         "Live TV"
     ]
 
+    categories.id = "categories"
     categories.translation = [96, 205]
 
     categories.SetFocus(true)

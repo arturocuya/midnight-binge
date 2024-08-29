@@ -1,18 +1,18 @@
 sub init()
-    categories = m.top.CreateChild("ButtonGroup")
-    categories.buttons = [
+    m.categories = m.top.CreateChild("ButtonGroup")
+    m.categories.buttons = [
         "Action",
         "Adventure",
         "TV Shows",
         "Live TV"
     ]
 
-    categories.id = "categories"
-    categories.translation = [96, 205]
+    m.categories.id = "categories"
+    m.categories.translation = [96, 205]
 
-    categories.SetFocus(true)
+    m.categories.SetFocus(true)
 
-    thumbnails = m.top.findNode("thumbnails")
+    m.thumbnails = m.top.findNode("thumbnails")
 
     ' Create list content
     content = CreateObject("roSGNode", "ContentNode")
@@ -28,5 +28,19 @@ sub init()
     item5 = row.CreateChild("ContentNode")
 
     ' Insert into list
-    thumbnails.content = content
+    m.thumbnails.content = content
 end sub
+
+function onKeyEvent(key as string, pressed as boolean) as boolean
+    if (not pressed)
+        return false
+    end if
+
+    if (key = "right")
+        m.thumbnails.SetFocus(true)
+    else if (key = "left")
+        m.categories.SetFocus(true)
+    end if
+
+    return false
+end function

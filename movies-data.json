@@ -1,0 +1,162 @@
+{
+    "action": [
+        {
+            "title": "Raiders of the Lost Ark",
+            "director": "Steven Spielberg",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903259/indianajones-thumbnail_kjsxkt.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903258/indianajones-frame_bcf4kq.png"
+        },
+        {
+            "title": "Mission: Impossible",
+            "director": "Brian De Palma",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903270/missionimpossible-thumbnail_tmqloa.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903269/missionimpossible-frame_q8xnvb.png"
+        },
+        {
+            "title": "RRR",
+            "director": "S. S. Rajamouli",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903279/rrr-thumbnail_aqvzz1.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903278/rrr-frame_wgspze.png"
+        },
+        {
+            "title": "Men in Black 3",
+            "director": "Barry Sonnenfeld",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903267/mib3-thumbnail_pmlw4q.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903266/mib3-frame_jhrien.png"
+        },
+        {
+            "title": "John Wick",
+            "director": "Chad Stahelski",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903261/johnwick-thumbnail_t8jzar.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903261/johnwick-frame_bprmub.png"
+        }
+    ],
+    "comedy": [
+        {
+            "title": "White Chicks",
+            "director": "Keenen Ivory Wayans",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903318/whitechicks-frame_ip2qdu.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903319/whitechicks-thumbnail_nlxnrm.png"
+        },
+        {
+            "title": "Paul",
+            "director": "Greg Mottola",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903277/paul-thumbnail_vztjc3.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903275/paul-frame_neu8os.png"
+        },
+        {
+            "title": "Asu Mare!",
+            "director": "Ricardo Maldonado",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903245/asumare-thumbnail_acl0hq.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903245/asumare-frame_gnmnlr.png"
+        },
+        {
+            "title": "Superbad",
+            "director": "Greg Mottola",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903292/superbad-thumbnail_ziyvwk.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903291/superbad-frame_y5u4yv.png"
+        },
+        {
+            "title": "Bad Boys 2",
+            "director": "Michael Bay",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903248/badboys2-thumbnail_o13r6o.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903247/badboys2-frame_fwgqme.png"
+        }
+    ],
+    "horror": [
+        {
+            "title": "GET OUT",
+            "director": "Jordan Peele",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903249/getout-frame_xk5jar.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903251/getout-thumbnail_kylfxb.png"
+        },
+        {
+            "title": "Life",
+            "director": "Daniel Espinosa",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903263/life-frame_dcf3ii.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903265/life-thumbnail_pqvlgs.png"
+        },
+        {
+            "title": "The Thing",
+            "director": "John Carpenter",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903308/thething-frame_lbpoeb.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903310/thething-thumbnail_dtj6w5.png"
+        },
+        {
+            "title": "SAW",
+            "director": "James Wan",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903282/saw-frame_vzfz6j.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903283/saw-thumbnail_kxrv15.png"
+        },
+        {
+            "title": "Train to Busan",
+            "director": "Yeon Sang-ho",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903315/traintobusan-frame_foaxlt.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903316/traintobusan-thumbnail_ed0gge.png"
+        }
+    ],
+    "drama": [
+        {
+            "title": "The Imitation Game",
+            "director": "Morten Tyldum",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903296/theimitationgame-thumbnail_un8nao.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903295/theimitationgame-frame_fqtvaa.png"
+        },
+        {
+            "title": "The Social Network",
+            "director": "David Fincher",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903306/thesocialnetwork-thumbnail_ytpip7.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903305/thesocialnetwork-frame_jxmy5e.png"
+        },
+        {
+            "title": "The Pursuit of Happyness",
+            "director": "Gabriele Muccino",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903302/thepursuitofhappyness-thumbnail_g8hogt.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903301/thepursuitofhappyness-frame_pya1ex.png"
+        },
+        {
+            "title": "The Impossible",
+            "director": "J. A. Bayona",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903299/theimpossible-thumbnail_jkpg6z.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903298/theimpossible-frame_hvg6i4.png"
+        },
+        {
+            "title": "The Truman Show",
+            "director": "Peter Weir",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903313/thetrumanshow-thumbnail_swsjo3.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903311/thetrumanshow-frame_glxxw3.png"
+        }
+    ],
+    "animation": [
+        {
+            "title": "Spirited Away",
+            "director": "Hayao Miyazaki",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903286/spiritedaway-thumbnail_puhtnp.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903284/spiritedaway-frame_soof86.png"
+        },
+        {
+            "title": "How To Train Your Dragon 2",
+            "director": "Dean DeBlois",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903256/howtotrainyourdragon2-thumbnail_cbrczt.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903255/howtotrainyourdragon2-frame_lqjlie.png"
+        },
+        {
+            "title": "Spirit: Stallion of the Cimarron",
+            "director": "Kelly Asbury and Lorna Cook",
+            "thumbnailUrl": "",
+            "frameUrl": ""
+        },
+        {
+            "title": "Ghost in the Shell",
+            "director": "Mamoru Oshii",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903289/spirit-thumbnail_vavsqg.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903288/spirit-frame_xu4oaz.png"
+        },
+        {
+            "title": "Over the Hedge",
+            "director": "Tim Johnson and Karey Kirkpatrick",
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903273/overthehedge-thumbnail_rvsh23.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903272/overthehedge-frame_jurvsf.png"
+        }
+    ]
+}

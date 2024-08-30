@@ -1,0 +1,33 @@
+import "pkg:/source/roku_modules/rokurequests/Requests.brs"
+
+sub init()
+    m.top.functionName = "execute"
+end sub
+
+const EndpointUrl = "https://raw.githubusercontent.com/arturocuya/notflix/1898c1dd21096190474d08a5ab1843843c5f538b/movies-data.json"
+
+sub execute()
+    response = rokurequests_Requests().get(EndpointUrl)
+
+    content = CreateObject("roSGNode", "ContentNode")
+
+    if (response.statusCode <> 200)
+        m.top.output = content
+        return
+    end if
+
+    row = content.CreateChild("ContentNode")
+
+    for each movie in response.json.action
+        rowItem = row.CreateChild("ContentNode")
+        rowItem.addFields({
+            title: movie.title,
+            director: movie.director,
+            thumbnailUrl: movie.thumbnailUrl,
+            frameUrl: movie.frameUrl
+        })
+    end for
+
+    m.top.output = content
+end sub
+

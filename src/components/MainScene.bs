@@ -12,23 +12,17 @@ sub init()
 
     m.categories.SetFocus(true)
 
+    m.getDataTask = CreateObject("roSGNode", "GetDataTask")
+    m.getDataTask.observeField("output", "handleGetDataTaskOutput")
+
     m.thumbnails = m.top.findNode("thumbnails")
 
-    ' Create list content
-    content = CreateObject("roSGNode", "ContentNode")
+    m.getDataTask.control = "RUN"
+end sub
 
-    ' Populate
-
-    row = content.CreateChild("ContentNode")
-
-    item1 = row.CreateChild("ContentNode")
-    item2 = row.CreateChild("ContentNode")
-    item3 = row.CreateChild("ContentNode")
-    item4 = row.CreateChild("ContentNode")
-    item5 = row.CreateChild("ContentNode")
-
-    ' Insert into list
-    m.thumbnails.content = content
+sub handleGetDataTaskOutput()
+    output = m.getDataTask.output
+    m.thumbnails.content = output
 end sub
 
 function onKeyEvent(key as string, pressed as boolean) as boolean

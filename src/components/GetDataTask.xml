@@ -1,6 +1,7 @@
 <component name="GetDataTask" extends="Task">
     <script type="text/brightscript" uri="GetDataTask.bs" />
     <interface>
+        <field id="inputCategory" type="string" />
         <field id="output" type="node" />
     </interface> 
 </component>

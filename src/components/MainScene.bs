@@ -1,23 +1,46 @@
+enum MovieCategory
+    Action = "Action"
+    Comedy = "Comedy"
+    Horror = "Horror"
+    Drama = "Drama"
+    Animation = "Animation"
+end enum
+
 sub init()
     m.categories = m.top.CreateChild("ButtonGroup")
     m.categories.buttons = [
-        "Action",
-        "Adventure",
-        "TV Shows",
-        "Live TV"
+        MovieCategory.Action,
+        MovieCategory.Comedy,
+        MovieCategory.Horror,
+        MovieCategory.Drama,
+        MovieCategory.Animation
     ]
 
     m.categories.id = "categories"
     m.categories.translation = [96, 205]
 
-    m.categories.SetFocus(true)
+    m.categories.observeField("buttonSelected", "handleCategoryButtonSelected")
+
+    m.thumbnails = m.top.findNode("thumbnails")
 
     m.getDataTask = CreateObject("roSGNode", "GetDataTask")
     m.getDataTask.observeField("output", "handleGetDataTaskOutput")
 
-    m.thumbnails = m.top.findNode("thumbnails")
+    m.categories.SetFocus(true)
 
+    loadCategory(MovieCategory.Action)
+end sub
+
+sub loadCategory(category as string)
+    m.getDataTask.inputCategory = category
     m.getDataTask.control = "RUN"
+end sub
+
+sub handleCategoryButtonSelected()
+    buttonSelected = m.categories.buttonSelected
+    category = m.categories.buttons[buttonSelected]
+
+    loadCategory(category)
 end sub
 
 sub handleGetDataTaskOutput()

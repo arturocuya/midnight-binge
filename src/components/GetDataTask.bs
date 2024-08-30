@@ -4,21 +4,34 @@ sub init()
     m.top.functionName = "execute"
 end sub
 
-const EndpointUrl = "https://raw.githubusercontent.com/arturocuya/notflix/1898c1dd21096190474d08a5ab1843843c5f538b/movies-data.json"
+const EndpointUrl = "https://raw.githubusercontent.com/arturocuya/notflix/master/movies-data.json"
 
 sub execute()
-    response = rokurequests_Requests().get(EndpointUrl)
+    response = rokurequests_Requests().get(EndpointUrl, {
+        timeout: 1000,
+        useCache: true
+    })
 
     content = CreateObject("roSGNode", "ContentNode")
 
     if (response.statusCode <> 200)
+        ? "[GetDataTask] status code not ok", response.statusCode
+        m.top.output = content
+        return
+    end if
+
+    category = LCase(m.top.inputCategory)
+    categoryMovies = response.json[category]
+
+    if (categoryMovies = invalid or categoryMovies.Count() = 0)
+        ? "[GetDataTask] category empty", category
         m.top.output = content
         return
     end if
 
     row = content.CreateChild("ContentNode")
 
-    for each movie in response.json.action
+    for each movie in categoryMovies
         rowItem = row.CreateChild("ContentNode")
         rowItem.addFields({
             title: movie.title,

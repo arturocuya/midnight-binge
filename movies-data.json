@@ -143,14 +143,14 @@
         {
             "title": "Spirit: Stallion of the Cimarron",
             "director": "Kelly Asbury and Lorna Cook",
-            "thumbnailUrl": "",
-            "frameUrl": ""
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903289/spirit-thumbnail_vavsqg.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903288/spirit-frame_xu4oaz.png"
         },
         {
             "title": "Ghost in the Shell",
             "director": "Mamoru Oshii",
-            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903289/spirit-thumbnail_vavsqg.png",
-            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903288/spirit-frame_xu4oaz.png"
+            "thumbnailUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903253/ghostintheshell-thumbnail_ujbcyi.png",
+            "frameUrl": "https://res.cloudinary.com/dmaxfkrjg/image/upload/v1724903252/ghostintheshell-frame_uhkdut.png"
         },
         {
             "title": "Over the Hedge",

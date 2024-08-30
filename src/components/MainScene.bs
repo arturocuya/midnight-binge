@@ -21,7 +21,11 @@ sub init()
 
     m.categories.observeField("buttonSelected", "handleCategoryButtonSelected")
 
+    m.movieShowcase = m.top.findNode("movieShowcase")
+    m.movieShowcase.visible = false
+
     m.thumbnails = m.top.findNode("thumbnails")
+    m.thumbnails.observeField("rowItemFocused", "handleMovieFocused")
 
     m.getDataTask = CreateObject("roSGNode", "GetDataTask")
     m.getDataTask.observeField("output", "handleGetDataTaskOutput")
@@ -43,9 +47,32 @@ sub handleCategoryButtonSelected()
     loadCategory(category)
 end sub
 
+sub handleMovieFocused()
+    rowItemFocused = m.thumbnails.rowItemFocused
+    rowFocused = rowItemFocused[0]
+    itemFocused = rowItemFocused[1]
+
+    movieData = m.thumbnails.content.getChild(rowFocused).getChild(itemFocused)
+    renderMovieShowcase(movieData)
+end sub
+
+sub renderMovieShowcase(movieData as object)
+    titleLabel = m.top.findNode("movieShowcase__title")
+    titleLabel.text = movieData.title
+
+    directedByLabel = m.top.findNode("movieShowcase__directedBy")
+    directedByLabel.text = `Directed by: ${movieData.director}`
+
+    framePoster = m.top.findNode("movieShowcase__framePoster")
+    framePoster.uri = movieData.frameUrl
+end sub
+
 sub handleGetDataTaskOutput()
     output = m.getDataTask.output
     m.thumbnails.content = output
+    m.movieShowcase.visible = true
+    
+    renderMovieShowcase(m.thumbnails.content.getChild(0).getChild(0))
 end sub
 
 function onKeyEvent(key as string, pressed as boolean) as boolean

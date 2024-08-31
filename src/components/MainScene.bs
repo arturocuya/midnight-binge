@@ -19,7 +19,7 @@ sub init()
     m.categories.id = "categories"
     m.categories.translation = [96, 205]
 
-    m.categories.observeField("buttonSelected", "handleCategoryButtonSelected")
+    m.categories.observeField("buttonFocused", "handleCategoryButtonFocused")
 
     m.movieShowcase = m.top.findNode("movieShowcase")
     m.movieShowcase.visible = false
@@ -27,21 +27,34 @@ sub init()
     m.thumbnails = m.top.findNode("thumbnails")
     m.thumbnails.observeField("rowItemFocused", "handleMovieFocused")
 
-    m.getDataTask = CreateObject("roSGNode", "GetDataTask")
-    m.getDataTask.observeField("output", "handleGetDataTaskOutput")
-
     m.categories.SetFocus(true)
 
     loadCategory(MovieCategory.Action)
 end sub
 
 sub loadCategory(category as string)
+    m.getDataTask = CreateObject("roSGNode", "GetDataTask")
+
     m.getDataTask.inputCategory = category
     m.getDataTask.control = "RUN"
+
+    ' Task is async, so we need to observe the output
+
+    m.getDataTask.observeField("output", "handleGetDataTaskOutput")
 end sub
 
-sub handleCategoryButtonSelected()
-    buttonSelected = m.categories.buttonSelected
+sub handleGetDataTaskOutput()
+    m.getDataTask.unobserveField("output")
+
+    output = m.getDataTask.output
+    m.thumbnails.content = output
+    m.movieShowcase.visible = true
+    
+    renderMovieShowcase(m.thumbnails.content.getChild(0).getChild(0))
+end sub
+
+sub handleCategoryButtonFocused()
+    buttonSelected = m.categories.buttonFocused
     category = m.categories.buttons[buttonSelected]
 
     loadCategory(category)
@@ -65,14 +78,6 @@ sub renderMovieShowcase(movieData as object)
 
     framePoster = m.top.findNode("movieShowcase__framePoster")
     framePoster.uri = movieData.frameUrl
-end sub
-
-sub handleGetDataTaskOutput()
-    output = m.getDataTask.output
-    m.thumbnails.content = output
-    m.movieShowcase.visible = true
-    
-    renderMovieShowcase(m.thumbnails.content.getChild(0).getChild(0))
 end sub
 
 function onKeyEvent(key as string, pressed as boolean) as boolean

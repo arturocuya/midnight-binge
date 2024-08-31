@@ -32,6 +32,15 @@
                 wrap="true"
             />
 
+            <Rectangle
+                id="frameBackground"
+                width="901"
+                height="550"
+                translation="[469, 0]"
+                color="#FFFFFF"
+                opacity="0.1"
+            />
+
             <Poster
                 id="movieShowcase__framePoster"
                 width="901"

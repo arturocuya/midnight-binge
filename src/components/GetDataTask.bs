@@ -1,10 +1,20 @@
 import "pkg:/source/roku_modules/rokurequests/Requests.brs"
+import "pkg:/source/roku_modules/promises/promises.brs"
 
 sub init()
     m.top.functionName = "execute"
 end sub
 
 const EndpointUrl = "https://raw.githubusercontent.com/arturocuya/notflix/master/movies-data.json"
+
+function getPromiseAndRun(category as string) as object
+    m.promise = promises.create()
+
+    m.category = category
+    m.top.control = "RUN"
+
+    return m.promise
+end function
 
 sub execute()
     response = rokurequests_Requests().get(EndpointUrl, {
@@ -16,16 +26,16 @@ sub execute()
 
     if (response.statusCode <> 200)
         ? "[GetDataTask] status code not ok", response.statusCode
-        m.top.output = content
+        promises.resolve(content, m.promise)
         return
     end if
 
-    category = LCase(m.top.inputCategory)
+    category = LCase(m.category)
     categoryMovies = response.json[category]
 
     if (categoryMovies = invalid or categoryMovies.Count() = 0)
         ? "[GetDataTask] category empty", category
-        m.top.output = content
+        promises.resolve(content, m.promise)
         return
     end if
 
@@ -41,6 +51,6 @@ sub execute()
         })
     end for
 
-    m.top.output = content
+    promises.resolve(content, m.promise)
 end sub
 

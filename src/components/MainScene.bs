@@ -1,3 +1,5 @@
+import "pkg:/source/roku_modules/promises/promises.brs"
+
 enum MovieCategory
     Action = "Action"
     Comedy = "Comedy"
@@ -35,22 +37,14 @@ end sub
 sub loadCategory(category as string)
     m.getDataTask = CreateObject("roSGNode", "GetDataTask")
 
-    m.getDataTask.inputCategory = category
-    m.getDataTask.control = "RUN"
+    promise = m.getDataTask@.getPromiseAndRun(category)
 
-    ' Task is async, so we need to observe the output
+    promises.onThen(promise, sub (output as object)
+        m.thumbnails.content = output
+        m.movieShowcase.visible = true
 
-    m.getDataTask.observeField("output", "handleGetDataTaskOutput")
-end sub
-
-sub handleGetDataTaskOutput()
-    m.getDataTask.unobserveField("output")
-
-    output = m.getDataTask.output
-    m.thumbnails.content = output
-    m.movieShowcase.visible = true
-    
-    renderMovieShowcase(m.thumbnails.content.getChild(0).getChild(0))
+        renderMovieShowcase(m.thumbnails.content.getChild(0).getChild(0))
+    end sub)
 end sub
 
 sub handleCategoryButtonFocused()

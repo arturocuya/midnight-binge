@@ -8,12 +8,16 @@
     "devDependencies": {
         "@rokucommunity/bslint": "^0.8.24",
         "brighterscript": "^0.67.5",
-        "brighterscript-formatter": "^1.7.4"
+        "brighterscript-formatter": "^1.7.4",
+        "dotenv": "^16.4.5",
+        "roku-deploy": "^3.12.1"
     },
     "scripts": {
         "prebuild": "rm -rf dist",
         "build": "bsc",
         "build:prod": "npm run build -- --sourceMap=false",
+        "prepackage": "npm run build:prod",
+        "package": "node scripts/package",
         "lint": "bslint --project config/bsconfig.lint.json --lintConfig config/bslint.jsonc",
         "lint:fix": "npm run lint -- --fix",
         "format:base": "bsfmt \"src/**/*.brs\" \"src/**/*.bs\" \"!src/components/lib/**/*\" \"!src/source/lib/**/*\" \"!**/bslib.brs\" \"!**/roku_modules/**/*\" --bsfmt-path \"config/bsfmt.jsonc\"",

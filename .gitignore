@@ -3,3 +3,5 @@ out/
 bsconfig.json
 node_modules
 roku_modules
+.env
+signed/

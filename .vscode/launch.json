@@ -10,7 +10,7 @@
             "rendezvousTracking": false,
             "rootDir": "${workspaceFolder}/dist/build",
             "preLaunchTask": "build",
-            "name": "Launch Notflix (dev)",
+            "name": "Launch Midnight Binge (dev)",
             "injectRdbOnDeviceComponent": true
         },
         {
@@ -22,7 +22,7 @@
             "rendezvousTracking": false,
             "rootDir": "${workspaceFolder}/dist/build",
             "preLaunchTask": "build-prod",
-            "name": "Launch Notflix (prod)"
+            "name": "Launch Midnight Binge (prod)"
         }
     ]
 }

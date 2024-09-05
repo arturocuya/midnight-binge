@@ -3,11 +3,11 @@
     <children>
         <!-- translation="[96, 54]" -->
         <Poster
-            id="notflixLogo"
-            uri="pkg:/images/notflix-logo.png"
-            translation="[135, 80]"
-            width="235"
-            height="77"
+            id="logo"
+            uri="pkg:/images/logo.png"
+            translation="[125, 0]"
+            width="250"
+            height="197"
         />
 
         <Group

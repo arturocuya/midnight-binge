@@ -1,4 +1,4 @@
-# Welcome to Notflix
+# Welcome to Midnight Binge
 
 > This project was created using [`npx create-roku-app`](https://github.com/haystacknews/create-roku-app)
 
@@ -16,7 +16,7 @@
 
 1. Go to the `Run and Debug` panel.
 
-1. Select the option `Launch Notflix (dev)`
+1. Select the option `Launch Midnight Binge (dev)`
 
 ## NPM Commands available
 

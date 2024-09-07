@@ -4,16 +4,5 @@ end sub
 
 sub handleItemContentSet()
     thumbnailPoster = m.top.findNode("thumbnailPoster")
-    tagBackground = m.top.findNode("tagBackground")
-    tagLabel = m.top.findNode("tagLabel")
-
     thumbnailPoster.uri = m.top.itemContent.thumbnailUrl
-
-    if (m.top.itemContent.tagLine <> invalid)
-        tagBackground.visible = true
-        tagLabel.text = m.top.itemContent.tagLine
-    else
-        tagBackground.visible = false
-        tagLabel.visible = false
-    end if
 end sub

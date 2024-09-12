@@ -6,15 +6,15 @@
     <children>
         <Rectangle
             id="thumbnailBackground"
-            width="341"
-            height="192"
+            width="192"
+            height="341"
             color="#FFFFFF"
             opacity="0.1"
         />
         <Poster
             id="thumbnailPoster"
-            width="341"
-            height="192"
+            width="192"
+            height="341"
             uri="pkg:/images/indiana.png"
         />
     </children>

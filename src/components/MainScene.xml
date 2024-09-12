@@ -54,8 +54,8 @@
             id="thumbnails"
             translation="[550, 600]"
             itemComponentName="Thumbnail"
-            itemSize="[1370, 192]"
-            rowItemSize="[[341, 192]]"
+            itemSize="[1370, 341]"
+            rowItemSize="[[192, 341]]"
             rowItemSpacing="[[37, 0]]"
             rowFocusAnimationStyle = "floatingFocus"
         />

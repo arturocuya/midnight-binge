@@ -4,6 +4,10 @@ sub main()
     screen.setMessagePort(m.port)
     m.global = screen.getGlobalNode()
 
+    input = CreateObject("roInput")
+    input.SetMessagePort(m.port)
+    input.EnableTransportEvents()
+
     scene = screen.CreateScene("MainScene")
     screen.show()
 
@@ -22,6 +26,9 @@ sub main()
             if (msg.isScreenClosed())
                 return
             end if
+        else if (msgType = "roInputEvent")
+            info = msg.GetInfo()
+            print "Input event", FormatJson(info)
         end if
     end while
 end sub

@@ -27,8 +27,10 @@ sub main()
                 return
             end if
         else if (msgType = "roInputEvent")
-            info = msg.GetInfo()
-            print "Input event", FormatJson(info)
+            if (msg.IsInput())
+                info = msg.GetInfo()
+                print "Input event", FormatJson(info)
+            end if
         end if
     end while
 end sub

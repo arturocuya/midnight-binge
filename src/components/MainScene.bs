@@ -32,6 +32,8 @@ sub init()
     m.categories.SetFocus(true)
 
     loadCategory(MovieCategory.Action)
+
+    m.top.signalBeacon("AppLaunchComplete")
 end sub
 
 sub loadCategory(category as string)
